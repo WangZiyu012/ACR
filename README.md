@@ -1,10 +1,8 @@
-# ACRead Implementation
+# ACR
 
-This repository contains the implementation of **ACRead**, a graph readout operation designed for graph classification tasks. Below are the required dependencies and model details.
+This repository contains the implementation of **ACR**, a graph readout operation designed for graph classification tasks. Below are the required dependencies and model details.
 
 ## Dependencies
-
-Ensure the following packages are installed before running the code:
 
 ```
 torch=2.4.1
@@ -25,15 +23,13 @@ networkx=2.8.8
 
 ## Model Parameters
 
-The model configuration is as follows:
-
 - **GNN Backbone:** Dropout rate of 0.5, 2 message-passing layers, 300-dimensional embeddings.
 - **Optimization:** Batch size of 512, learning rate of 0.001, weight decay of 0.0001, early stopping with a patience of 50 epochs.
 - **Evaluation:** Performed using 10-fold cross-validation.
 - **Readout Operation:** ACRead readout operation using the Hadamard dot product as the $g_{\Psi}$ function, 9 centralities, 8 attention heads, $f_W$ is the different GNN backbone.
 
 
-## Usage
+## Example usage
 
 ### Graph Classification on the NCI1 Dataset
 
